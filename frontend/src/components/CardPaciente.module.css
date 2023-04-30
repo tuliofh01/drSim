@@ -1,0 +1,20 @@
+.card {
+  background: linear-gradient(to right, #444, #222);
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  color: white;
+  font-family: sans-serif;
+  width: auto;
+  margin: 5px auto 5px auto;
+}
+
+.cardTitle {
+  font-weight: bold;
+  font-size: 24px;
+  margin-top: 0;
+}
+
+.cardText {
+  margin: 10px 0;
+}

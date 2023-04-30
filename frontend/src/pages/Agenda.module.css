@@ -1,0 +1,17 @@
+.container{
+      display: flex;
+      gap: 50px;
+      justify-content: center;
+      margin: 100px auto 0 auto;
+}
+
+.calendarContainer{
+      text-align: center;
+      color: #fff;
+      
+}
+
+.containerHorarios{
+      text-align: center;
+      color: #fff;
+}

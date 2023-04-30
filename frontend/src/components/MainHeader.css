@@ -1,0 +1,42 @@
+#headerHD {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px; /* Set height of header */
+  background-color: #222; /* Set background color of header */
+  background-image: linear-gradient(to right, #222, #444); /* Set gradient background color of header */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; /* Set z-index to make the header appear above other elements */
+}
+
+#navListHD {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+#navListHD li {
+  margin-right: 20px; /* Space between each list item */
+}
+
+#navListHD li:last-child {
+  margin-right: 0; /* Remove margin from the last list item */
+}
+
+#navListHD li a {
+  text-decoration: none;
+  color: #fff; /* Text color of the links */
+  padding: 10px;
+  transition: color 0.3s ease-in-out; /* Add transition for hover effect */
+}
+
+#navListHD li a:hover {
+  color: #5677d8; /* Text color of the links on hover */
+}
