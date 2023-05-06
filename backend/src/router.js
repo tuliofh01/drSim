@@ -46,19 +46,23 @@ router.post("/buscarMedico", verifyToken, async (req, res) => {
 })
 
 router.post("/buscarPaciente", verifyToken, async (req, res) => {
-    const patientsList = await appModel.buscarPaciente(req.username, req.body.nome);
+  const patientsList = await appModel.buscarPaciente(req.username, req.body.nome);
+
     if (patientsList === false){
         res.status(404).json({"error": "no patients found"});
+    } else{
+        res.status(200).json(patientsList);
     }
-    res.status(200).json(patientsList);
 });
 
 router.post("/buscarConsultas", verifyToken, async (req, res) => {
     const consultasList = await appModel.buscarConsultas(req.body.data, req.username);
     if (consultasList === false) {
       res.status(404).json({ error: "no consultas found" });
+    } else{
+      res.status(200).json(consultasList);
     }
-    res.status(200).json(consultasList);
+    
 });
 
 router.post("/criarPaciente", verifyToken, async (req, res) => {
