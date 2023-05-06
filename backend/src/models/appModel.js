@@ -12,13 +12,23 @@ async function autenticarLogin(user, password){
 }
 
 async function buscarPaciente(medico, nome){
-    const patientsArray =
-      await connection.query(`SELECT * FROM PACIENTES WHERE USER_MEDICO = '${medico}' 
-    AND NOME = '${nome}'`);
 
-    if (patientsArray[0].length > 0) {
+  let formattedNomePaciente = nome;
+  formattedNomePaciente = formattedNomePaciente.trim().toLowerCase().split(" ");
+  for (let i = 0; i < formattedNomePaciente.length; i++) {
+    formattedNomePaciente[i] =
+      formattedNomePaciente[i].charAt(0).toUpperCase() +
+      formattedNomePaciente[i].slice(1);
+  }
+  formattedNomePaciente = formattedNomePaciente.join(" ");
+
+  const patientsArray = await connection.query(`SELECT * FROM PACIENTES WHERE USER_MEDICO = '${medico}' 
+    AND NOME LIKE '%${formattedNomePaciente}%'`);
+
+    if (patientsArray[0].length > 0){
       return patientsArray;
-    } else {
+    }
+    else {
       return false;
     }
 }
