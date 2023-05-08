@@ -1,9 +1,9 @@
 {
-  "routes": [
+  "rewrites": [
     {
-      "src": "/(.*)",
-      "dest": "https://ba9d-187-20-28-40.ngrok-free.app/$1",
-      "methods": ["POST"]
+      "source": "/:path*",
+      "destination": "https://ba9d-187-20-28-40.ngrok-free.app/:path*",
+      "method": "POST"
     }
   ]
 }
