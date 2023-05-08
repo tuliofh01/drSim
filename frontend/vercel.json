@@ -1,7 +1,7 @@
 {
   "routes": [
     {
-      "src": "/(.*)",
+      "src": "/api/(.*)",
       "methods": ["POST"],
       "dest": "https://ba9d-187-20-28-40.ngrok-free.app/",
       "headers": {
@@ -10,6 +10,7 @@
       "body": {
         "type": "json"
       },
+      "rewrite": "api"
     }
   ]
 }
