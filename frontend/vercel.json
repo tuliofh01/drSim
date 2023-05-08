@@ -4,7 +4,7 @@
     {
       "source": "/:path*",
       "destination": "https://ba9d-187-20-28-40.ngrok-free.app/:path*",
-      "method": "POST"
+      "methods": ["POST"]
     }
   ]
   
