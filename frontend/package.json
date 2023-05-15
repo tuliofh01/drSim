@@ -1,6 +1,6 @@
 {
   "name": "frontend",
-  "proxy": "https://83a2-177-182-179-140.ngrok-free.app/",
+  "proxy": "https://1e26-177-182-179-140.ngrok-free.app/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
