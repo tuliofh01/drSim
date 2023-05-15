@@ -3,7 +3,7 @@
     {
       "src": "/(.*)",
       "methods": ["POST"],
-      "dest": "https://83a2-177-182-179-140.ngrok-free.app/$1"
+      "dest": "https://1e26-177-182-179-140.ngrok-free.app/$1"
     }
   ]
 }
